@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Portfolio</title>
+     <style>
+          body{
+               background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+          }
+          header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                color: #fff;
+                cursor: pointer;
+          }
+          .logo {
+                font-size: 24px;
+                font-weight: bold;
+                color: #30cfd0;
+          }
+          .buttons {
+                display: flex;
+                margin-top: 20px;
+                margin-right: 20px;
+                gap: 90px;
+                font-size: 25px;
+          }
+          .buttons p {
+                color: #fff;
+                transition: color 0.2s;
+          }
+          .buttons p:hover {
+                color: #30cfd0;
+          }
+          .myself {
+                text-align: center;
+                color: #fff;
+                margin-top: 50px;
+          }
+          .color {
+                color: #d8f438;
+                font-weight: bold;
+                font-size: 20px;
+          }
+          .contact {
+                text-align: center;
+                margin-top: 10px;
+          }
+          .contact button {
+                color: #330867;
+                background: #30cfd0;
+                border: none;
+                padding: 10px 20px;
+                margin: 5px;
+                cursor: pointer;
+                font-size: 16px;
+                border-radius: 4px;
+          }
+          .contact button:hover {
+                background-color: #330867;
+                color: #fff;
+          }
+          .social {
+                text-align: center;
+                margin-top: 20px;
+          }
+          .social a {
+                color: #30cfd0;
+                margin: 0 10px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: color 0.2s;
+          }
+          .social a:hover {
+                color: #d8f438;
+          }
+          .skill {
+                text-align: center;
+                color: #fff;
+                margin-top: 50px;
+          }
+          .container{
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 40px;
+          }
+          .profile{
+                width: 450px;
+                height: 550px;
+                background-color: #0a0a0a;
+                border-radius: 16px;
+                box-shadow: 0 4px 24px rgba(48,207,208,0.15);
+                margin-top: 0px;
+                margin-left: 230px;
+          }
+          .text{
+                width: 600px;
+                margin: 0 auto;
+                font-size: 20px;
+                color: #e0e0e0;
+          }
+          .pr{
+                font-size: 25px;
+          }
+          .qualification{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+          }
+          .blocks{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                gap: 120px;
+                margin: 60px auto 0 auto;
+          }
+          .box{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 170px;
+                height: 170px;
+                background: #222054;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(48,207,208,0.15);
+          }
+          .box img {
+                width: 120px;
+                height: 120px;
+                background: #fff;
+                border-radius: 8px;
+          }
+          .education{
+                color: #fff;
+                text-align: center;
+                font-size: 30px;
+                margin-top: 60px;
+                margin-bottom: 20px;
+          }
+          .main{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width:100%;
+                margin: auto;
+          }
+          .edu-flex {
+                display: flex;
+                gap: 150px;
+                justify-content: center;
+                align-items: stretch;
+                width: 100%;
+          }
+          .edu-box {
+                width: 300px;
+                height: 370px;
+                background-color: #30cfd0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(51,8,103,0.15);
+                transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+          }
+          .edu-box:hover {
+                box-shadow: 0 8px 24px rgba(48,207,208,0.35);
+                background-color: #d8f438;
+                color: #222;
+          }
+          .edu-box:hover h2 {
+                color: #222;
+                cursor: pointer;
+          }
+          .first, .second, .third {
+                color: #330867;
+                text-align: center;
+                font-size: 16px;
+                margin-top: 20px;
+          }
+          .img1{
+                width: 210px;
+                height: 130px;
+                margin: auto;
+          }
+          .img1 img{
+                width: 100%;
+                height: 100%;
+          }
+          .head2{
+                text-align: center;
+                color: #fff;
+                font-size: 30px;
+                margin-top: 50px;
+                margin-bottom: 20px;
+          }
+          .project{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 90px;
+                
+                
+          }
+          .project-block {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+                width: 90%;
+                margin: auto;
+                align-items: center;
+                justify-content: center;
+                
+          }
+          .project-row {
+                display: flex;
+                
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+          }
+          .project-cell {
+                width: 500px;
+                height: 300px;
+                background-color: #faf9f9;
+                border-radius: 12px;
+                box-shadow: 0 2px 8px rgba(51,8,103,0.10);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+          }
+          .img2{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+          }
+          .img2 img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+          }
+          .content {
+                padding: 20px;
+                font-size: 16px;
+               color: #330867;
+       }
+       .blur-container {
+             position: relative;
+             width: 100%;
+             height: 300px;
+             overflow: hidden;
+       }
+       .blur-container::before {
+             content: "";
+             position: absolute;
+             top: 0;
+             left: 0;
+             width: 100%;
+             height: 100%;
+             background-image: url('your-image.jpg');
+             background-size: cover;
+             background-position: center;
+             filter: blur(8px);
+             z-index: 0;
+       }
+       .blur-content {
+             position: relative;
+             z-index: 1;
+             color: white;
+             padding: 20px;
+       }
+       .arrow {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+       }
+       .arrow img {
+             width: 50px;
+             height: 50px;
+       }
+       .project-link {
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             width: 400px;
+             height: 200px;
+       }
+       .footer{
+          width: 100%;
+          height: 250px;
+          background-color: rgb(10, 10, 38);
+          margin-top: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          
+       }
+       .fix {
+             text-align: center;
+             color: #fff;
+             margin-top: 20px;
+       }
+       .end{
+                text-align: center;
+                
+                color: #fff;
+                margin-top: 40px;
+       } 
+       .email {
+             color: #d8f438;
+             font-size: 18px;
+             
+             margin-top: 20px;
+       } 
+       @media only screen and (max-width: 600px) {
+      .container{
+          align-items: center;
+          margin-top: 20px;
+          flex-direction: column;
+
+      }
+      
+      .myself{
+          text-align: center;
+          margin-top: 20px;
+      }
+      .pr{
+          width: 90%;
+          margin-left: 10px;
+          font-size: 25px;
+
+      }
+          .color{
+               width: 90%;
+               margin-left: 10px;
+               font-size: 30px;
+          }
+      .text{
+          width : 90%;
+          margin-left: 10px;
+          font-size: 20px;
+      }
+      .contact{
+          width: 80%;
+          margin-left: 10px;
+          display: flex;
+          align-items: center;     
+
+      }
+      .social{
+          width: 80%;
+          margin-left: 10px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 20px;
+      }
+      .profile{
+          width: 70%;
+          height: 400px;
+          margin-top: 20px;
+          margin-left: 0px;
+      }
+      .skill{
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;  
+          color: #fff;
+      }
+      .qualification{
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          color: #fff;
+          
+      }
+      .blocks{
+          
+          align-items: center;
+          gap: 20px;
+      }
+      .education{
+          width: 100%;
+          text-align: center;
+          margin-top: 20px;
+          color: #fff;
+      }
+      .main{
+          
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+      }
+     .edu-flex {
+           
+           align-items: center;
+           gap: 20px;
+     }
+     .edu-box{
+          width: 90%;
+          height: 300px;
+          margin: auto;
+          margin-top: 20px;
+     }
+     .edu-box h2 {
+          font-size: 18px;
+          margin-top: 10px;
+          color: #330867;
+          text-align: center;
+     }
+     .edu-box:hover h2 {
+          color: #222;
+          cursor: pointer;
+     }
+
+     .first, .second, .third {
+          font-size: 16px;
+          margin-top: 10px;
+          color: #330867;
+          text-align: center;
+      
+
+     }  
+     .img1 {
+          width: 100%;
+          height: 150px;
+          margin: auto;
+     }
+     .img1 img {
+          width: 100%;
+          height: 100%;
+     }
+     .head2 {
+          font-size: 24px;
+          margin-top: 20px;
+          color: #fff;
+     }
+     .project{
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-top: 20px;
+          
+     }
+     .project-block {
+          width: 90%;
+          margin: auto;
+          align-items: center;
+          justify-content: center;
+     }
+     .project-row {
+          display: flex;
+          align-items: center;
+     }
+     .project-cell {
+          width: 90%;
+          height: auto;
+          margin-bottom: 20px;
+     }
+     .content {
+          padding: 20px;
+          font-size: 16px;
+          color: #330867;
+     }
+     .img2 {
+          width: 100%;
+          height: 200px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+     .img2 img {
+          width: 100%;
+          height: 100%;
+     }
+     .arrow {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+     }
+     .arrow img {
+          width: 30px;
+          height: 30px;
+     }
+     .project-link {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: auto;
+     }
+     .footer {
+          width: 100%;
+          height: auto;
+          background-color: rgb(10, 10, 38);
+          margin-top: 50px;
+          
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 20px;
+     }
+     .fix {
+          text-align: center;
+          color: #fff;
+          margin-top: 20px;
+          height: auto;
+          width: 100%;
+     }
+     .end {
+          text-align: center;
+          color: #fff;
+          margin-top: 20px;
+          width: 100%;
+     }
+     .email {
+          color: #d8f438;
+          font-size: 16px;
+          margin-top: 10px;
+          width: 100%;
+     }
+     }
+
+
+    
+
+     
+     </style>
+</head>
+<body>
+     <header>
+          <div class="logo"><b>Praveen</b></div>
+          <div class="buttons">
+               <p>Home</p>
+               <p>About</p>
+               <p>Portfolio</p>
+               <p>Contact</p>
+          </div>
+     </header>
+     <div class="container">
+          <div class="myself">
+               <div class="pr"><h1>Hi, I'm Praveen P</h1></div>
+               <div class="color"><h4>Frontend Developer</h4></div>
+               <div class="text">
+                    <p><b>Welcome to my portfolio!</b> I am a passionate frontend developer with a keen eye for design and a love for creating user-friendly web applications. My journey in web development has been driven by a desire to build intuitive and engaging digital experiences.</p>
+                    <p>With a strong foundation in HTML, CSS, and JavaScript, I enjoy crafting responsive and visually appealing websites.</p>
+                    <p>Thank you for visiting my portfolio!</p>
+               </div>
+               <div class="contact">
+                    <button>Contact Me</button>
+                    <button>Hire Me</button>
+                    <button>Download Resume</button>
+                    <button>email me</button>
+               </div>
+               <div class="social">
+                     <a href="#" title="Facebook" target="_blank" rel="noopener"></a>
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="LinkedIn" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="GitHub" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="Twitter" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a></a>
+               </div>
+          </div>
+          <div class="profile">
+               <img src="myimg.jpeg" alt="profile" style="width: 100%; height: 100%; border-radius: 16px; box-shadow: 0 4px 24px rgba(48,207,208,0.15);">
+          </div>
+     </div>
+     <div class="skill">
+          <h1 style="font-size: 50px; text-align: center; color:white;">My Skills</h1>
+     </div>
+     <div class="qualification">
+          <div class="blocks">
+               <div class="box">
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.wDgw9g-THozu3Psy9jVoqwHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="html">
+               </div>
+               <div class="box">
+                    <img src="https://logospng.org/download/css-3/logo-css-3-2048.png" alt="css">
+               </div>
+               <div class="box">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="js">
+               </div>
+          </div>
+     </div>
+     <div class="education">
+          <h1>Education</h1>
+     </div>
+     <div class="main">
+          <div class="edu-flex">
+               <div class="edu-box">
+                    <div class="first">
+                         <div class="img1">
+                              <img src="https://www.freeiconspng.com/uploads/education-png-3.png" alt="school">
+                         </div>
+                         <h2>+2 <br>Science<br>S V G V H S S<br>Kidangannur</h2>
+                    </div>
+               </div>
+               <div class="edu-box">
+                    <div class="second">
+                         <div class="img1">
+                              <img src="https://i.pinimg.com/originals/d7/69/46/d76946d2974ec80ac896055e93c181fd.png" alt="diploma">
+                         </div>
+                         <h2>Diploma<br>Computer Engineering<br>N S S Polytechnic<br>College Pandalam</h2>
+                    </div>
+               </div>
+               <div class="edu-box">
+                    <div class="third">
+                         <div class="img1">
+                              <img src="https://i.pinimg.com/originals/07/3e/a8/073ea8b86447ed9310e7e73bd89894b3.png" alt="mern">
+                         </div>
+                         <h2>MERN Stack<br>Byteboot Technosolutions<br>Pvt Ltd<br>Eranakulam</h2>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="head2"><h1>My Projects</h1></div> 
+     <div class="project">
+          </div><div class="project-block">
+               <div class="project-row">
+                    
+                    <div class="project-cell">
+                         <div class="content" style="font-style: oblique;" >
+                              <p>
+                                   <b>Music Shop Website</b><br>
+                                   A responsive website design for a music shop, showcasing instruments, services, and expertise.<br><br>
+                                   <b>Features:</b><br>
+                                   - Instrument catalog with filtering and sorting<br>
+                                   - Service pages for lessons, repairs, and rentals<br>
+                                   - Prominent call-to-actions for contact and social media<br>
+                                   - Responsive design for optimal mobile and desktop experience<br><br>
+                                   
+                              </p>
+                         </div>
+                    </div>
+                    <div class="project-link">
+                         <div class="arrow">
+                              <img src="arrow.png">
+                         </div>
+                    </div>
+                    <div class="project-cell">
+                         <div class="img2">
+                              <img src="https://cdn.motocms.com/src/868x580/72100/72174-original-1200.jpg" alt="music shop">
+                         </div>
+                    </div>
+               </div>
+               <div class="project-row">
+                    <div class="project-cell">
+                         <div class="content" style="font-style: oblique;">
+                              <p>
+                                   <b>Restaurant Website Project</b><br>
+                                   A responsive website design for a restaurant, showcasing menus, services, and online ordering capabilities.<br><br>
+                                   <b>Features:</b><br>
+                                   - Responsive design for optimal mobile and desktop experience<br>
+                                   - Menu catalog with filtering and sorting<br>
+                                   - Online ordering and reservation system<br>
+                                   - Integration with social media platforms<br>
+                                   - Prominent call-to-actions for contact and directions<br><br>
+                                  
+                              </p>
+                              </p>
+                         </div>
+                    </div>
+                    <div class="project-link">
+                         <div class="arrow">
+                              <img src="arrow.png">
+                         </div>
+                    </div>
+                    <div class="project-cell">
+                         <div class="img2">
+                              <img src="https://tse2.mm.bing.net/th/id/OIP.61gQHZrWLXSB56hf27fwzQHaEN?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="restaurant">
+                         </div>
+                    </div>
+               </div>
+          </div>
+     </div>
+     <div class="footer">
+           <div class="fix">
+               <h1 style="color: #fff;">Thank you for visiting my portfolio!</h1>
+               <p style="color: #d8f438;">Feel free to reach out for collaborations or inquiries.</p>
+                  <div class="social">
+                    <a href="#" title="Facebook" target="_blank" rel="noopener"></a>
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="LinkedIn" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="GitHub" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a>
+                    <a href="#" title="Twitter" target="_blank" rel="noopener">
+                         <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/twitter.svg" alt="Twitter" style="width:32px;height:32px;vertical-align:middle;filter:invert(56%) sepia(97%) saturate(749%) hue-rotate(134deg) brightness(97%) contrast(92%);">
+                    </a></a>
+               </div>
+               <div class="email">
+                    <p style="color: #d8f438;">Email:praveen271jan@gmail.com</p>
+               </div>
+                  <div class="end">
+                    <p style="color: #fff;">© 2025 Praveen P. All rights reserved.</p>
+     </div>
+           </div>
+            
+</body>
+</html>
